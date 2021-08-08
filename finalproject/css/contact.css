@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+aside{
+	text-align:center;
+    border-radius: 10px;
+    background-color: rgb(211, 211, 211);
+	overflow:auto;
+    padding:30px;
+    margin:5px;
+}
+a:link {
+    color:rgb(102, 57, 102);
+    text-decoration: underline;
+}
+a:visited {
+    color:lightseagreen;
+    text-decoration: underline;
+}
+a:hover {
+    color: white;
+       background-color: purple;
+    text-decoration: none;
+}
+a:active {
+    color:rgb(0, 81, 255);
+    text-decoration: underline;
+}
+
+img{
+    text-align: center;
+    max-width: 1000px;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color:#111;
+    overflow-x:hidden;
+    transition:0.5s;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration:none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 24px;
+    margin-left: 50px;
+}
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+.icon-bar {
+    margin-top: 10px;
+    width: 100%; /* Full-width */
+    background-color: rgb(56, 18, 59);
+    overflow: auto; /* Overflow due to float */
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.5s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: rgb(211, 211, 211); /* Add a hover color */
+}

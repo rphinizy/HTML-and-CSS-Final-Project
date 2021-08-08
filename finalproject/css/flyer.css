@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(211, 211, 211);
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+h1{
+    color: rgb(56, 18, 59);
+    text-shadow: 2px 5px 15px rgba(92, 92, 92, 0.568);
+    font-family: cursive;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-family: cursive;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 2px 5px 15px rgba(92, 92, 92, 0.568);
+}
+
+section{
+    text-align: center;
+    background-color: rgb(211, 211, 211);
+    border-radius:20px;
+}
+
+article > section {
+	text-align:center;
+    border-radius: 10px;
+	font-size:16px;
+    background-color: rgb(211, 211, 211);
+	max-height:1100px;
+	overflow:auto;
+    padding:10px;
+    margin:5px;
+}
+
+aside{
+    color: white;
+    padding:10px;
+    font-size:16px;
+    text-align:center;
+	margin-top: 10px;
+	border-radius:10px;
+    background-color: rgb(56, 18, 59);
+    border-radius:20px;	
+}
+
+article > section > p > img {
+    text-align: center;
+    border-radius: 5px;
+    border:5px solid white;
+    max-width: 800px;
+}
+
+a:link {
+    color:rgb(102, 57, 102);
+    text-decoration: underline;
+}
+
+a:visited {
+    color:lightseagreen;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+       background-color: purple;
+    text-decoration: none;
+}
+
+a:active {
+    color:rgb(0, 81, 255);
+    text-decoration: underline;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color:#111;
+    overflow-x:hidden;
+    transition:0.5s;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration:none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 24px;
+    margin-left: 50px;
+}
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+.icon-bar {
+    margin-top: 10px;
+    width: 100%; /* Full-width */
+    background-color: rgb(56, 18, 59);
+    overflow: auto; /* Overflow due to float */
+    border-radius:20px;
+    margin-bottom:10px;
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.5s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+
+.icon-bar a:hover {
+    background-color: rgb(211, 211, 211); /* Add a hover color */
+}
+/* Grid classes */
+.top{grid-area:t}
+.note{grid-area:n}
+.bottom{grid-area:b}
+.left{grid-area:l}
+.middle{grid-area:mid}
+.right{grid-area:r}
+/*default grid container */
+.grid-container{
+	display: grid;
+	grid-template-rows:max-content;
+	grid-template-areas:
+		't t t t t t'
+		'm m m m m m'
+		'l l mid mid r r'
+		'n n n n n n'
+		'b b b b b b';
+}
+/* mobile grid container */
+@media (max-width: 600px) {
+	.grid-container {
+		grid-template-areas:
+		't t t t t t'
+		'n n n n n n'
+		'l l l l l l'
+		'mid mid mid mid mid mid'
+		'r r r r r r'
+		'm m m m m m'
+		'b b b b b b';
+	}
+}
